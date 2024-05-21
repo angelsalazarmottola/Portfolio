@@ -12,8 +12,8 @@
 }
 
 :root {
-    --bg-color: #fdfdfd;
-    --text-color: #333;
+    --bg-color: #0b061f;
+    --text-color: #fdfdfd;
     --main-color: #60d4ea;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
@@ -24,11 +24,11 @@
     color: var(--bg-color);
 }
 
-.dark-mode {
+/* .dark-mode {
     --bg-color: #0b061f;
     --text-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
-}
+} */
 
 html {
     font-size: 62.5%;
@@ -73,6 +73,31 @@ body {
     margin-right: 3.5rem;
 }
 
+.subcategories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.subcategories a {
+    color: var(--main-color);
+}
+
+.subcategories a:hover {
+    color: var(--text-color);
+}
+
+
+#web {
+    display: block;
+}
+
+/* #aws #badge {
+    display: none;
+} */
+
+
 .header.sticky .navbar a {
     color: var(--text-color);
 }
@@ -96,11 +121,11 @@ body {
     opacity: .7;
 }
 
-#darkMode-icon {
+/* #darkMode-icon {
     font-size: 2.4rem;
     color: var(--white-color);
     cursor: pointer;
-}
+} */
 
 .header.sticky #darkMode-icon {
     color: var(--text-color);
@@ -338,6 +363,9 @@ span {
     margin-bottom: 5rem;
 }
 
+.subtitle {
+    padding-top: 50px;
+}
 .services .services-container {
     display: flex;
     justify-content: center;
@@ -386,34 +414,18 @@ span {
     color: var(--main-color);
 }
 
-/* .services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-} */
-
-/* .portfolio h2 {
+.portfolio {
     min-height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
 }
 
-.portfolio-2 h2 {
-    padding-bottom:3rem;
+.portfolio h2 {
+    margin-bottom: 4rem;
 }
-
-.contact h2 {
-    padding-bottom:3rem;
-} */
 
 .portfolio .portfolio-container {
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.portfolio-2 .portfolio-container-2 {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -421,35 +433,17 @@ span {
 .portfolio-container .portfolio-box {
     position: relative;
     display: flex;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
-    overflow: hidden;
-}
-
-.portfolio-container-2 .portfolio-box-2 {
-    position: relative;
-    display: flex;
-    border-radius: 3rem;
+    border-radius: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
 }
 
 .portfolio-box img {
     width: 100%;
-    height: 250px;
-    transition: .5s ease;
-}
-
-.portfolio-box-2 img {
-    width: 100%;
     transition: .5s ease;
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.1);
-}
-
-.portfolio-box-2:hover img {
     transform: scale(1.1);
 }
 
@@ -484,30 +478,14 @@ span {
     margin: .3rem 0 1rem;
 }
 
-.btn-port {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.btn-port a {
-    margin:10px;
-}
-
-.btn-port a i {
-    font-size: 30px !important;
-}
-
-
 .portfolio-layer a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     width: 5rem;
     height: 5rem;
     background: var(--white-color);
-    border-radius: 30%;
+    border-radius: 50%;
 }
 
 .portfolio-layer a i {
@@ -548,13 +526,35 @@ span {
     border-bottom: .8rem solid var(--main-color);
 }
 
-.testimonial-slide img {
-    width: 14rem;
-    height: 14rem;
-    object-fit: cover;
-    border-radius: 50%;
-    border: .5rem solid var(--bg-color);
-    outline: .5rem solid var(--main-color);
+.testimonial-contents .testimonial-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    padding: 3rem 5rem;
+    border-top: .8rem solid var(--main-color);
+    border-bottom: .8rem solid var(--main-color);
+}
+
+.testimonial-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* border-radius: 50%; */
+    /* border: .5rem solid var(--bg-color);
+    outline: .5rem solid var(--main-color); */
+}
+
+.testimonial-content-badge {
+    /* border:solid #0b061f; */
+    height: 350px;
+}
+
+.testimonial-slide .imageform {
+    width: 40%;
+    object-fit: contain;
 }
 
 .testimonial-slide h3 {
@@ -581,7 +581,7 @@ span {
 }
 
 .testimonial-box .swiper-pagination-bullet {
-    background: rgba(0, 0, 0, .8);
+    background: var(--main-color);
 }
 
 .testimonial-box .swiper-pagination-bullet-active {
@@ -615,8 +615,8 @@ span {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--bg-color);
+    color: var(--bg-color);
+    /* background: var(--bg-color); */
     border-radius: .8rem;
     margin: .7rem 0;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
