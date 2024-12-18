@@ -269,7 +269,7 @@ section {
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
-    padding: 13px 0;
+    padding: 23px 0;
 }
 
 .home .profession-box .profession:nth-child(1) i {
@@ -338,6 +338,7 @@ span {
 .heading {
     font-size: 4.5rem;
     text-align: center;
+    /* padding-bottom: 2rem; */
 }
 
 .about-content h2 {
@@ -356,7 +357,8 @@ span {
 
 .services {
     min-height: auto;
-    padding: 4rem;
+    padding: 1rem;
+    /* border: #fdfdfd solid 10px; */
 }
 
 .services h2 {
@@ -377,8 +379,8 @@ span {
 .services-container .services-box {
     flex: 1 1 30rem;
     background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+    padding: 6rem 2rem 4rem;
+    border-radius: 3rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
     text-align: center;
     border-top: .6rem solid var(--main-color);
@@ -386,9 +388,15 @@ span {
     transition: .5s ease;
 }
 
+.services-container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
 .services-box {
     width:100%;
     height: 320px;
+    margin-bottom: 25px;
 }
 
 .services-container .services-box:hover {
@@ -416,7 +424,9 @@ span {
 
 .portfolio {
     min-height: auto;
-    padding-bottom: 10rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    /* border: #fdfdfd solid 10px; */
 }
 
 .portfolio h2 {
@@ -498,7 +508,8 @@ span {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
+    /* border: #fdfdfd solid 10px; */
 }
 
 .testimonial-container .testimonial-wrapper {
@@ -711,6 +722,10 @@ span {
 
     .home .profession-container .profession-box {
         right: -20%;
+    }
+    .profession-box {
+        padding:auto;
+        /* border: #fdfdfd solid 10px; */
     }
 
     .home .profession-container .overlay {
